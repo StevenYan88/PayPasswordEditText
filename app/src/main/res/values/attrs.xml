@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="PasswordEditText">
+        <!--密码个数-->
+        <attr name="passwordNumber" format="integer"/>
+        <!--密码原点的半径-->
+        <attr name="passwordRadius" format="dimension"/>
+        <!--密码原点的颜色-->
+        <attr name="passwordColor" format="color"/>
+        <!--分割线的颜色-->
+        <attr name="divisionLineColor" format="color"/>
+        <!--分割线的大小  指宽度-->
+        <attr name="divisionLineSize" format="dimension"/>
+        <!--背景边框的颜色-->
+        <attr name="bgColor" format="color"/>
+        <!--背景边框的大小-->
+        <attr name="bgSize" format="dimension"/>
+        <!--背景边框的圆角大小-->
+        <attr name="bgCorner" format="dimension"/>
+
+    </declare-styleable>
+</resources>
