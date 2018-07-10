@@ -5,7 +5,8 @@
 ![device-2018-07-10-112505.gif](https://upload-images.jianshu.io/upload_images/1472453-b2dabfaa93389b77.gif?imageMogr2/auto-orient/strip)
 
 
-![ps.png](https://upload-images.jianshu.io/upload_images/1472453-8d91c2e0a2c7fb59.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![ps.png](https://upload-images.jianshu.io/upload_images/1472453-8d91c2e0a2c7fb59.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)  
+
 看这样一张图 我们首先需要绘制这样一个View    
     1. 绘制外围Rect
     2. 绘制分割线
