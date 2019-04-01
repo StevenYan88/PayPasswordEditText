@@ -1,5 +1,4 @@
-# PayPasswordEditText
-打造一款属于自己的支付密码输入框
+### 打造一款属于自己的支付密码输入框
 
 ### 效果图
 ![device-2018-07-10-112505.gif](https://upload-images.jianshu.io/upload_images/1472453-b2dabfaa93389b77.gif?imageMogr2/auto-orient/strip)
