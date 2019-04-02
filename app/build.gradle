@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+//apply plugin: 'com.novoda.bintray-release'
 
 android {
     compileSdkVersion 27
@@ -17,6 +18,18 @@ android {
         }
     }
 }
+
+//publish{
+//    userOrg = 'zhiwenyan'//bintray.com的用户名
+//    groupId = 'com.steven'//jcenter上的路径
+//    artifactId = 'PayPasswordEditText'//项目名称
+//    publishVersion = '1.0.0'//版本号
+//}
+//tasks.withType(Javadoc) {//防止编码问题
+//    options.addStringOption('Xdoclint:none', '-quiet')
+//    options.addStringOption('encoding', 'UTF-8')
+//    options.addStringOption('charSet', 'UTF-8')
+//}
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])

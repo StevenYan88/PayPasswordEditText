@@ -48,11 +48,11 @@ public class PayPasswordView extends LinearLayout implements View.OnClickListene
      */
     private void setItemClickListener(View view) {
         if (view instanceof ViewGroup) {
-            ViewGroup viewGroup = ( ViewGroup ) view;
+            ViewGroup viewGroup = (ViewGroup) view;
             int childCount = viewGroup.getChildCount();
             for (int i = 0; i < childCount; i++) {
                 //不断的给里面所有的View设置setOnClickListener
-                View childView = (( ViewGroup ) view).getChildAt(i);
+                View childView = ((ViewGroup) view).getChildAt(i);
                 setItemClickListener(childView);
             }
         } else {
@@ -63,7 +63,7 @@ public class PayPasswordView extends LinearLayout implements View.OnClickListene
     @Override
     public void onClick(View v) {
         if (v instanceof TextView) {
-            String number = (( TextView ) v).getText().toString().trim();
+            String number = ((TextView) v).getText().toString().trim();
             mPasswordEditText.addPassword(number);
         }
         if (v instanceof ImageView) {
@@ -73,6 +73,6 @@ public class PayPasswordView extends LinearLayout implements View.OnClickListene
 
     @Override
     public void passwordFull(String password) {
-        Toast.makeText(getContext(),"你输入的密码是："+password,Toast.LENGTH_SHORT).show();
+        Toast.makeText(getContext(), "你输入的密码是：" + password, Toast.LENGTH_SHORT).show();
     }
 }

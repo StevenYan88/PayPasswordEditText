@@ -57,6 +57,7 @@ public class PasswordEditText extends AppCompatEditText {
         setCursorVisible(false);
         //不弹出系统软键盘
         setInputType(InputType.TYPE_NULL);
+        //背景去掉
         setBackground(null);
         initPaint();
     }
@@ -67,10 +68,10 @@ public class PasswordEditText extends AppCompatEditText {
     private void initAttributeSet(Context context, AttributeSet attrs) {
         TypedArray array = context.obtainStyledAttributes(attrs, R.styleable.PasswordEditText);
         // 获取大小
-        mDivisionLineSize = ( int ) array.getDimension(R.styleable.PasswordEditText_divisionLineSize, dip2px(mDivisionLineSize));
-        mPasswordRadius = ( int ) array.getDimension(R.styleable.PasswordEditText_passwordRadius, dip2px(mPasswordRadius));
-        mBgSize = ( int ) array.getDimension(R.styleable.PasswordEditText_bgSize, dip2px(mBgSize));
-        mBgCorner = ( int ) array.getDimension(R.styleable.PasswordEditText_bgCorner, 0);
+        mDivisionLineSize = (int) array.getDimension(R.styleable.PasswordEditText_divisionLineSize, dip2px(mDivisionLineSize));
+        mPasswordRadius = (int) array.getDimension(R.styleable.PasswordEditText_passwordRadius, dip2px(mPasswordRadius));
+        mBgSize = (int) array.getDimension(R.styleable.PasswordEditText_bgSize, dip2px(mBgSize));
+        mBgCorner = (int) array.getDimension(R.styleable.PasswordEditText_bgCorner, 0);
         // 获取颜色
         mBgColor = array.getColor(R.styleable.PasswordEditText_bgColor, mBgColor);
         mDivisionLineColor = array.getColor(R.styleable.PasswordEditText_divisionLineColor, mDivisionLineColor);
@@ -121,7 +122,7 @@ public class PasswordEditText extends AppCompatEditText {
      */
     private void drawRect(Canvas canvas) {
         //矩形
-        RectF rect = new RectF(mBgSize, mBgSize, getWidth() - mBgSize, getHeight() - mBgSize);
+        RectF rect = new RectF(mBgSize >> 1, mBgSize >> 1, getWidth() - (mBgSize >> 1), getHeight() - (mBgSize >> 1));
         mRectPaint.setStrokeWidth(mBgSize);
         //画空心
         mRectPaint.setStyle(Paint.Style.STROKE);
@@ -190,7 +191,7 @@ public class PasswordEditText extends AppCompatEditText {
     }
 
     private int dip2px(int dip) {
-        return ( int ) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
+        return (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
                 dip, getResources().getDisplayMetrics());
     }
 
